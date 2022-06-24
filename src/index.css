@@ -1,5 +1,16 @@
-body {
+* {
   margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  list-style-type: none;
+  box-sizing: border-box;
+}
+
+body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -16,4 +27,12 @@ code {
   max-width: 1440px;
   margin: 0 auto;
   padding: 0 20px;
+}
+
+.job-listing li {
+  margin: 20px 0;
+  border: solid 1px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
 }

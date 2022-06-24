@@ -16,7 +16,7 @@ const App = () => {
 
   return (
     <div className="wrapper">
-      <ul>
+      <ul className='job-listing'>
         {jobs.map(job => 
             <Job key={job.id} data={job}/>
           )}

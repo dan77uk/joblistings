@@ -2,7 +2,16 @@ const Job = ({ data }) => {
 
   return (
     <li>
-    {data.position}
+      <img src={data.logo} alt=''/>
+    <div>
+      {data.company}
+      {data.positon}
+      {data.postedAt}
+      {data.contract}
+      {data.location}
+    </div>
+
+
     </li>
   )
 }
