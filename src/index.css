@@ -11,16 +11,12 @@
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: 'League Spartan', sans-serif;
+  background-color: hsl(180, 52%, 96%);
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: 'League Spartan', sans-serif;
 }
 
 .wrapper {
@@ -31,8 +27,40 @@ code {
 
 .job-listing li {
   margin: 20px 0;
-  border: solid 1px;
-  padding: 20px;
+  padding: 30px;
   display: flex;
   align-items: center;
+  justify-content: flex-start;
+  background-color: #FFF;
+  border-radius: 5px; 
+  box-shadow:7px 7px 14px rgb(211, 233, 240);
+}
+
+.job-info {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+  height: 100%;
+}
+
+.company-name {
+  color: hsl(180, 29%, 50%);
+  font-weight: 500;
+}
+
+.job-position {
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: hsl(180, 14%, 20%);
+  padding: 15px 0;
+}
+
+.job-data {
+  display: flex;
+  gap: 10px;
+  color: hsl(180, 8%, 52%);
+}
+
+.tags {
+margin-left: auto;
 }

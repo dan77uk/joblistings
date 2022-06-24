@@ -65,7 +65,7 @@
       "company": "Loop Studios",
       "logo": "./images/loop-studios.svg",
       "new": false,
-      "featured": false,
+      "featured": true,
       "position": "Software Engineer",
       "role": "Fullstack",
       "level": "Midweight",
