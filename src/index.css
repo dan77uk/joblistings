@@ -103,3 +103,38 @@ code {
   color: #fff;
   transition: .4s;
 }
+
+.filter-catagories ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10px;
+  border: solid 1px;
+  background: #FFF;
+  padding: 20px 30px 20px 35px;
+}
+
+.filter-catagories ul li {
+  display: flex ;
+  gap: 15px;
+  align-items: center;
+  background: hsl(180, 52%, 96%);
+  height: 30px;
+  padding: 0 0 0 15px;
+}
+
+.filter-catagories ul li span {
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  background: 
+    hsl(180, 29%, 50%) 
+    url('../public/images/icon-remove.svg')
+    no-repeat
+    center;
+}
+
+.filter-catagories ul li span:hover {
+  background-color: black;
+  transition: .4s;
+}

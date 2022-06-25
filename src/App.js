@@ -15,19 +15,37 @@ const App = () => {
       })
   }, [])
 
-  const tabValue = (e) => {
-    setFilterCatagories(e.target.textContent)
+  const tabValue = (event) => {
+    if (filterCatagories.includes(event.target.textContent)) {
+      return 
+    }
+    // setFilterCatagories(filterCatagories.concat(event.target.textContent))
+    setFilterCatagories(filterCatagories => [...filterCatagories, event.target.textContent ])
+
+  }
+
+  const removeCatagory = (event) => {
+    const itemToRemove = event.target.attributes.value.value
+    setFilterCatagories(filterCatagories.filter(item => item !== itemToRemove))
   }
   
-  console.log(filterCatagories)
-
   return (
     <div className="wrapper">
+      {filterCatagories.length > 0 ? 
+        <section className='filter-catagories'>
+          <ul>
+            {filterCatagories.map((catagory, index) =>
+              <li key={index}>{catagory}
+                <span value={catagory} onClick={removeCatagory}></span>
+              </li>)}
+          </ul>
+        </section> : ''}
       <section className='job-listing'>
         {jobs.map(job => 
             <Job key={job.id} data={job} filterEvent={tabValue}/>
           )}
       </section>
+      
     </div>
   );
 }
