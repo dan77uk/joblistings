@@ -1,23 +1,28 @@
+import Tab from './Tab'
+
 const Job = ({ data }) => {
-
   return (
-    <li>
-      <img src={data.logo} alt=''/>
+    <article>
+      <img src={data.logo} alt={data.company} />
       <div className="job-info">
-        <span className="company-name">{data.company}
-        {data.new ? 'new' : ''}
-        {data.featured ? 'featured' : ''}
-
-        </span>
-
-        <span className="job-position">{data.position}</span>
-        <span className="job-data">{data.postedAt}&#x2022;{data.contract}&#x2022;{data.location}</span>
+        <h3 className="company-name">{data.company}
+        {data.new ? <span className='tab blue'>NEW!</span> : ''}
+        {data.featured ? <span className='tab black'>FEATURED</span> : ''}
+        </h3>
+        <h2 className="job-position">{data.position}</h2>
+        <p className="job-data">{data.postedAt}&#x2022;{data.contract}&#x2022;{data.location}</p>
       </div>
-      <div className="tags">
-        hello
-
+      <div className='catagory-container'>
+        <Tab props={data.role} />
+        <Tab props={data.level} />
+        {data.languages.map((language, index) => 
+          <Tab key={index} props={language} />
+        )}
+        {data.tools.map((tool, index) => 
+          <Tab key={index} props={tool} />
+        )}
       </div>
-    </li>
+    </article>
   )
 }
 

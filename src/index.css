@@ -25,15 +25,20 @@ code {
   padding: 0 20px;
 }
 
-.job-listing li {
+.job-listing article {
   margin: 20px 0;
   padding: 30px;
   display: flex;
   align-items: center;
   justify-content: flex-start;
   background-color: #FFF;
-  border-radius: 5px; 
+  border-radius: 8px; 
   box-shadow:7px 7px 14px rgb(211, 233, 240);
+  border-left: solid 5px #fff;
+}
+
+.job-listing article:hover {
+  border-left: solid 5px hsl(180, 29%, 50%);
 }
 
 .job-info {
@@ -61,6 +66,40 @@ code {
   color: hsl(180, 8%, 52%);
 }
 
-.tags {
-margin-left: auto;
+.tab {
+  margin-left: 5px;
+  padding: 7px 12px 4px 12px;
+  font-size: .8rem;
+  font-weight: 700;
+  color: #FFF;
+  border-radius: 20px;
+}
+
+.blue {
+  margin-left: 20px;
+  background: hsl(180, 29%, 50%);
+}
+
+.black {
+  background: rgb(32, 32, 32);
+}
+
+.catagory-container {
+  margin-left: auto;
+  display: flex;
+  gap: 10px;
+}
+
+.catagory-container p {
+  background: hsl(180, 52%, 96%);
+  color: hsl(180, 29%, 50%);
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.catagory-container p:hover {
+  background: hsl(180, 29%, 50%);
+  color: #fff;
+  transition: .4s;
 }

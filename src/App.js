@@ -16,11 +16,11 @@ const App = () => {
 
   return (
     <div className="wrapper">
-      <ul className='job-listing'>
+      <section className='job-listing'>
         {jobs.map(job => 
             <Job key={job.id} data={job}/>
           )}
-      </ul>
+      </section>
     </div>
   );
 }
