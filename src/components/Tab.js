@@ -1,7 +1,7 @@
-const Tab = ({ props }) => {
+const Tab = ({ props, filterEvent }) => {
   
   return (
-    <p>
+    <p onClick={filterEvent}>
       {props}
     </p>
   )

@@ -1,6 +1,6 @@
 import Tab from './Tab'
 
-const Job = ({ data }) => {
+const Job = ({ data, filterEvent }) => {
   return (
     <article>
       <img src={data.logo} alt={data.company} />
@@ -13,13 +13,13 @@ const Job = ({ data }) => {
         <p className="job-data">{data.postedAt}&#x2022;{data.contract}&#x2022;{data.location}</p>
       </div>
       <div className='catagory-container'>
-        <Tab props={data.role} />
-        <Tab props={data.level} />
+        <Tab props={data.role} filterEvent={filterEvent} />
+        <Tab props={data.level} filterEvent={filterEvent} />
         {data.languages.map((language, index) => 
-          <Tab key={index} props={language} />
+          <Tab key={index} props={language} filterEvent={filterEvent}/>
         )}
         {data.tools.map((tool, index) => 
-          <Tab key={index} props={tool} />
+          <Tab key={index} props={tool} filterEvent={filterEvent} />
         )}
       </div>
     </article>
