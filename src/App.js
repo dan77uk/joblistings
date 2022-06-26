@@ -24,6 +24,15 @@ const App = () => {
 
   }
 
+  let filteredList = []
+  filterCatagories.forEach(catagory => {
+    const test = jobs.filter(job => {
+      return job.languages.includes(catagory)
+    })
+    console.log(test);
+  })
+
+
   const removeCatagory = (event) => {
     const itemToRemove = event.target.attributes.value.value
     setFilterCatagories(filterCatagories.filter(item => item !== itemToRemove))
