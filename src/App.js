@@ -38,6 +38,17 @@ const App = () => {
     ))
   }
 
+<<<<<<< HEAD
+=======
+  let filteredList = []
+  filterCatagories.forEach(catagory => {
+    const test = jobs.filter(job => {
+      return job.languages.includes(catagory)
+    })
+    console.log(test);
+  })
+
+>>>>>>> 10685471aa6303886601a27df2fdfe1e5a826fc7
 
   const removeCatagory = (event) => {
     setFilterCatagories(filterCatagories.filter(item => item !== event.target.attributes.value.value))
