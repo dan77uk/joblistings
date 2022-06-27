@@ -25,6 +25,13 @@ code {
   padding: 0 20px;
 }
 
+.header {
+  width: 100%;
+  height: 156px;
+  background: 
+    url('../public/images/bg-header-desktop.svg')
+}
+
 .job-listing article {
   margin: 20px 0;
   padding: 30px;
@@ -38,6 +45,7 @@ code {
 }
 
 .job-listing article:hover {
+  transition: .4s;
   border-left: solid 5px hsl(180, 29%, 50%);
 }
 
@@ -90,7 +98,7 @@ code {
   gap: 10px;
 }
 
-.catagory-container p {
+.catagory-container button {
   background: hsl(180, 52%, 96%);
   color: hsl(180, 29%, 50%);
   padding: 10px;
@@ -98,10 +106,21 @@ code {
   cursor: pointer;
 }
 
-.catagory-container p:hover {
+.catagory-container button:hover {
   background: hsl(180, 29%, 50%);
   color: #fff;
   transition: .4s;
+}
+
+.filter-catagories {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  border-radius: 5px;
+  background: #FFF;
+  padding: 25px 30px 25px 35px;
+  margin-top: -43px;
+  box-shadow: 0px 7px 10px rgba(80, 88, 90, .2);
 }
 
 .filter-catagories ul {
@@ -109,9 +128,6 @@ code {
   flex-direction: row;
   flex-wrap: wrap;
   gap: 10px;
-  border: solid 1px;
-  background: #FFF;
-  padding: 20px 30px 20px 35px;
 }
 
 .filter-catagories ul li {
@@ -137,4 +153,15 @@ code {
 .filter-catagories ul li span:hover {
   background-color: black;
   transition: .4s;
+}
+
+.clear-filters {
+  cursor:pointer;
+  margin-left: auto;
+  font-weight: 500;
+  color: hsl(180, 8%, 52%);
+}
+
+.clear-filters:hover {
+  text-decoration: underline;
 }

@@ -1,35 +1,53 @@
 import Job from './components/Job'
 import { useState, useEffect } from 'react'
 import axios from 'axios'
+import { data } from './data'
 
 const App = () => {
 
   const [jobs, setJobs] = useState([])
   const [filterCatagories, setFilterCatagories] = useState([])
 
-  useEffect(() => {
-    axios
-      .get('http://localhost:3001/jobs')
-      .then(response => {
-        setJobs(response.data)
-      })
-  }, [])
+  // const hook = () => {
+  //   axios
+  //     .get('http://localhost:3001/jobs')
+  //     .then(response => {
+  //       setJobs(response.data)
+  //     })
+  // }
 
-  const tabValue = (event) => {
+  // useEffect(hook, [])
+
+    const hook = () => {
+      setJobs(data)
+    }
+
+  useEffect(hook, [])
+
+  const tabValue = async (event) => {
     if (filterCatagories.includes(event.target.textContent)) {
       return 
     }
-    // setFilterCatagories(filterCatagories.concat(event.target.textContent))
     setFilterCatagories(filterCatagories => [...filterCatagories, event.target.textContent ])
+    // setFilterCatagories(filterCatagories.concat(event.target.textContent ))
 
+    setJobs(jobs.filter((job) => 
+      filterCatagories.every((catagory) => 
+        Object.values(job).includes(catagory)
+      )
+    ))
   }
+
 
   const removeCatagory = (event) => {
-    const itemToRemove = event.target.attributes.value.value
-    setFilterCatagories(filterCatagories.filter(item => item !== itemToRemove))
+    setFilterCatagories(filterCatagories.filter(item => item !== event.target.attributes.value.value))
+    
   }
-  
+
   return (
+    <>
+          <section className='header'></section>
+
     <div className="wrapper">
       {filterCatagories.length > 0 ? 
         <section className='filter-catagories'>
@@ -39,6 +57,7 @@ const App = () => {
                 <span value={catagory} onClick={removeCatagory}></span>
               </li>)}
           </ul>
+          <button onClick={() => setFilterCatagories([])} className='clear-filters'>Clear</button>
         </section> : ''}
       <section className='job-listing'>
         {jobs.map(job => 
@@ -47,6 +66,7 @@ const App = () => {
       </section>
       
     </div>
+    </>
   );
 }
 

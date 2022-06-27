@@ -1,9 +1,9 @@
 const Tab = ({ props, filterEvent }) => {
   
   return (
-    <p onClick={filterEvent}>
+    <button onClick={filterEvent}>
       {props}
-    </p>
+    </button>
   )
 
 }
