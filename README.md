@@ -42,8 +42,8 @@ Mobile Active Filter
 
 ### Links
 
-- My solution repository: [Add solution URL here](https://github.com/danphillipsuk/joblistings)
-- My solution live URL: [Add live site URL here](https://danphillipsuk.github.io/joblistings/)
+[- My solution repository:](https://github.com/danphillipsuk/joblistings)
+[- My solution live URL:](https://danphillipsuk.github.io/joblistings/)
 
 ## My process
 
