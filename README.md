@@ -6,7 +6,7 @@ This is a solution to the [Job listings with filtering challenge on Frontend Men
 
 - [Overview](#overview)
   - [The challenge](#the-challenge)
-  - [Mt Solution Screenshot](#screenshot)
+  - [My Solution Screenshot](#screenshot)
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
@@ -43,6 +43,7 @@ Mobile Active Filter
 ### Links
 
 [- My solution repository:](https://github.com/danphillipsuk/joblistings)
+
 [- My solution live URL:](https://danphillipsuk.github.io/joblistings/)
 
 ## My process
