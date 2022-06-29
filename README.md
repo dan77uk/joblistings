@@ -38,6 +38,7 @@ Desktop Active Filter
 ![](./design/mySolutionActive.png)
 
 Mobile Active Filter
+
 ![](./design/mySolutionMobile.png)
 
 ### Links
