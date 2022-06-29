@@ -35,25 +35,23 @@ const App = () => {
 
   return (
     <>
-          <section className='header'></section>
-
+    <section className='header'></section>
     <div className="wrapper">
       {filterCategories.length > 0 ? 
-        <section className='filter-catagories'>
-          <ul>
-            {filterCategories.map((catagory, index) =>
-              <li key={index}>{catagory}
-                <span value={catagory} onClick={removeCatagory}></span>
-              </li>)}
-          </ul>
-          <button onClick={resetFilters} className='clear-filters'>Clear</button>
-        </section> : ''}
+      <section className='filter-catagories'>
+        <ul>
+          {filterCategories.map((catagory, index) =>
+            <li key={index}>{catagory}
+              <span value={catagory} onClick={removeCatagory}></span>
+            </li>)}
+        </ul>
+        <button onClick={resetFilters} className='clear-filters'>Clear</button>
+      </section> : ''}
       <section className='job-listing'>
-        {res.map(job => 
-            <Job key={job.id} data={job} filterEvent={tabValue}/>
-          )}
+      {res.map(job => 
+          <Job key={job.id} data={job} filterEvent={tabValue}/>
+        )}
       </section>
-      
     </div>
     </>
   );

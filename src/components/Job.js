@@ -2,7 +2,7 @@ import Tab from './Tab'
 
 const Job = ({ data, filterEvent }) => {
   return (
-    <article>
+    <article data-role={data.role} data-level={data.level} data-languages={data.languages} data-tools={data.tools}>
       <img src={data.logo} alt={data.company} />
       <div className="job-info">
         <h3 className="company-name">{data.company}
@@ -10,7 +10,13 @@ const Job = ({ data, filterEvent }) => {
         {data.featured ? <span className='tab black'>FEATURED</span> : ''}
         </h3>
         <h2 className="job-position">{data.position}</h2>
-        <p className="job-data">{data.postedAt}&#x2022;{data.contract}&#x2022;{data.location}</p>
+        <p className="job-data">
+          <span>{data.postedAt}</span>
+          <span>&#x2022;</span>
+          <span>{data.contract}</span>
+          <span>&#x2022;</span>
+          <span>{data.location}</span>
+        </p>
       </div>
       <div className='catagory-container'>
         <Tab props={data.role} filterEvent={filterEvent} />
