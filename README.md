@@ -70,7 +70,7 @@ For instance, if the user had selected a filter catagory (populating the filterC
 }
 ```
 
-Or to check whether the bollean 'New' or 'Featured values were true:
+Or to check whether the boolean 'New' or 'Featured values were true:
 
 ```js
 {data.new ? <span className='tab blue'>NEW!</span> : ''}
