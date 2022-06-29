@@ -56,6 +56,10 @@ code {
   transition: .4s;
 }
 
+.job-listing article img {
+  height: 95px;
+}
+
 .job-info {
   display: flex;
   flex-direction: column;
@@ -65,7 +69,6 @@ code {
 
 .company-name {
   color: hsl(180, 29%, 50%);
-  font-weight: 500;
   display: flex;
   gap: 5px;
   align-items: center;
@@ -148,6 +151,8 @@ code {
   background: hsl(180, 52%, 96%);
   height: 30px;
   padding: 0 0 0 15px;
+  color: hsl(180, 29%, 50%);
+  font-weight: 700;
 }
 
 .filter-catagories ul li span {
@@ -180,9 +185,6 @@ code {
 @media screen and (max-width: 959px) {
   .job-info {
     flex-basis: 1;
-    padding: 0;
-    margin: 0;
-
   }
   .catagory-container{
     width: 100%;
@@ -191,15 +193,49 @@ code {
     margin-top: 15px;
     flex-wrap: wrap;
   }
+}
 
-  .job-listing article img {
-    height: 55px;
-    position: absolute;
-    margin-top: -245px;
+@media screen and (max-width: 959px) {
+  .filter-catagories {
+    padding: 15px 20px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+
+  .filter-catagories {
+    font-size: .8rem;
+    align-items: center;;
+  }
+
+  .filter-catagories ul li {
+    gap: 5px;
+    height: 30px;
+    padding: 0 0 0 5px;
+  }
+
+  .job-info {
+    padding: 0;
+    margin: 0;
   }
 
   .job-listing article {
     margin: 60px 0;
     padding: 45px 15px 15px 15px;
+    position: relative;
+  }
+
+  .job-listing article img {
+    height: 60px;
+    position: absolute;
+    top: -30px;
+  }
+
+  .job-position {
+    font-size: 1rem;
+  }
+
+  .catagory-container {
+    font-size: .8rem;
   }
 }
