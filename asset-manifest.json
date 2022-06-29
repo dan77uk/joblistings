@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.90d3e684.css",
-    "main.js": "/static/js/main.b452d48e.js",
-    "static/media/bg-header-desktop.svg": "/static/media/bg-header-desktop.e8bdee7677ce4e6424f1.svg",
-    "index.html": "/index.html",
-    "static/media/icon-remove.svg": "/static/media/icon-remove.70c075ce001e5ccae7c6.svg",
-    "main.90d3e684.css.map": "/static/css/main.90d3e684.css.map",
-    "main.b452d48e.js.map": "/static/js/main.b452d48e.js.map"
+    "main.css": "/joblistings/static/css/main.98f71866.css",
+    "main.js": "/joblistings/static/js/main.b452d48e.js",
+    "static/media/bg-header-desktop.svg": "/joblistings/static/media/bg-header-desktop.e8bdee7677ce4e6424f1.svg",
+    "index.html": "/joblistings/index.html",
+    "static/media/icon-remove.svg": "/joblistings/static/media/icon-remove.70c075ce001e5ccae7c6.svg",
+    "main.98f71866.css.map": "/joblistings/static/css/main.98f71866.css.map",
+    "main.b452d48e.js.map": "/joblistings/static/js/main.b452d48e.js.map"
   },
   "entrypoints": [
-    "static/css/main.90d3e684.css",
+    "static/css/main.98f71866.css",
     "static/js/main.b452d48e.js"
   ]
 }
