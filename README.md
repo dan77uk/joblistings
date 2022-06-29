@@ -32,14 +32,19 @@ Users should be able to:
 ### My Solution Screenshots
 
 Desktop
+
 ![](./design/mySolution.png)
 
+
 Desktop Active Filter
+
 ![](./design/mySolutionActive.png)
+
 
 Mobile Active Filter
 
 ![](./design/mySolutionMobile.png)
+
 
 ### Links
 
@@ -58,29 +63,33 @@ Mobile Active Filter
 
 ### What I learned
 
-The project was simple to make thanks to React. I split the app into two components; individual job listings (Job.js) and a tab component for the filter catagories (Tab.js). I also used ternery operators in quite a few areas to determine if certain conditions were true. for instance, if the user had selected a filter catagory (populating the filterCatagory array held in state), my app displays the filter bar:
+The project was simple to make thanks to React. I split the app into two components; individual job listings (Job.js) and a tab component for the filter catagories (Tab.js). I also used ternery operators in a few areas to determine if certain conditions were true;
+
+For instance, if the user had selected a filter catagory (populating the filterCatagory array held in state), my app displays the filter bar:
 
 ```js
 {filterCategories.length > 0 ? /* displays filter bar */ : ''
 }
 ```
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
 
-To see how you can add code snippets, see below:
+Or to check whether the bollean 'New' or 'Featured values were true:
 
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
+```js
+{data.new ? <span className='tab blue'>NEW!</span> : ''}
+{data.featured ? <span className='tab black'>FEATURED</span> : ''}
 ```
 
+The most challenging aspect was displaying the filtered data once catagories had been selected. However I solved this by making the filterCatagories array a dependency of the useEffect hook, and that re-rendered on each catagory addition or deletion, keeping the DOM up-to-date:
 
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
+```js
+  useEffect(hook, [jobs, filterCategories])
+  ...
+  const res = jobs.filter((job) => 
+    filterCategories.every((catagory) => 
+      Object.values(job).includes(catagory) || Object.values(job.tools).includes(catagory) || Object.values(job.languages).includes(catagory)
+    )
+  )
+```
 
 ### Continued development
 
