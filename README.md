@@ -2,6 +2,10 @@
 
 This is a solution to the [Job listings with filtering challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/job-listings-with-filtering-ivstIPCt).
 
+### Links
+
+[- My solution live URL:](https://dan77uk.github.io/joblistings/)
+
 ## Table of contents
 
 - [Overview](#overview)
@@ -42,13 +46,6 @@ Desktop Active Filter
 Mobile Active Filter
 
 ![](./design/mySolutionMobile.png)
-
-
-### Links
-
-[- My solution repository:](https://github.com/danphillipsuk/joblistings)
-
-[- My solution live URL:](https://danphillipsuk.github.io/joblistings/)
 
 ## My process
 
